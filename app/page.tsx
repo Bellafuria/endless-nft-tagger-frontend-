@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { WalletSelector } from "@aptos-labs/wallet-adapter-react";
 
 export default function Home() {
   const [nftAddress, setNftAddress] = useState('');
@@ -41,10 +40,6 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex justify-center mb-12">
-          <WalletSelector />
-        </div>
-
         <div className="bg-gray-800/60 backdrop-blur-lg rounded-3xl p-10 shadow-2xl mb-12">
           <label className="block text-xl font-medium mb-4">NFT Object Address</label>
           <input
@@ -64,7 +59,7 @@ export default function Home() {
 
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="bg-gray-800/60 backdrop-blur-lg rounded-3xl p-10">
-            <h2 className="text-4xl font-bold mb-8">Current Tags</h2>
+            <h2 className="text-4xl font-bold mb-6">Current Tags</h2>
             <div className="flex flex-wrap gap-4 mb-8">
               {tags.map((tag, i) => (
                 <span key={i} className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-xl font-medium">
@@ -88,7 +83,7 @@ export default function Home() {
           </div>
 
           <div className="bg-gray-800/60 backdrop-blur-lg rounded-3xl p-10">
-            <h2 className="text-4xl font-bold mb-8">File Attachments</h2>
+            <h2 className="text-4xl font-bold mb-6">File Attachments</h2>
             <div className="space-y-6 mb-8">
               {attachments.map((att, i) => (
                 <div key={i} className="bg-gray-900 rounded-xl p-6">
